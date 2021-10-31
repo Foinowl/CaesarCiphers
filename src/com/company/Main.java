@@ -11,6 +11,6 @@ public class Main {
         String stringReader = InputService.readTextFromFile("D:\\epam\\caesarChiper\\src\\com\\company\\Новый текстовый документ (2).txt");
         System.out.println(stringReader);
 
-        System.out.println(CaesarChiperService.decode("Мама мыла раму", 3));
+        System.out.println(CaesarChiperService.decode("мама мыла раму", 3));
     }
 }

@@ -40,7 +40,7 @@ public class InputAndOutputService {
                 if (buf != null)
                     return buf;
             } catch (IOException e) {
-                System.out.println("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
+                writeMessage("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
             }
         }
     }

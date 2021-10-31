@@ -12,9 +12,9 @@ public class Main {
         CaesarCipher caesarCipherService = new CaesarCipherService(new RuCaesarCipherRepository());
         String resultBruteForceEncode = caesarCipherService.bruteForceEncode(stringReader);
         if (resultBruteForceEncode != null) {
-            System.out.println("\nРезультат поиска:\n" + resultBruteForceEncode);
+            InputAndOutputService.writeMessage("\nРезультат поиска:\n" + resultBruteForceEncode);
         } else {
-            System.out.println("Ничего не нашел :(");
+            InputAndOutputService.writeMessage("Ничего не нашел :(");
         }
     }
 }

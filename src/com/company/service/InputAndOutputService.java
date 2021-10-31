@@ -3,7 +3,6 @@ package com.company.service;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,7 +12,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 
 public class InputAndOutputService {
-    private static BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
+    private static final BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message) {
         System.out.println(message);

@@ -15,7 +15,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class InputService {
     private static BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
 
-    public static StringReader readTextFromFile(String path) {
+    public static String readTextFromFile(String path) {
         Path absolutePath = Paths.get(path).toAbsolutePath();
         StringBuilder stringFromFile = new StringBuilder();
         try {
@@ -27,7 +27,7 @@ public class InputService {
             e.printStackTrace();
         }
 
-        return new StringReader(stringFromFile.toString());
+        return stringFromFile.toString();
     }
 
     public static String readString() {

@@ -1,18 +1,16 @@
 package com.company;
 
+import com.company.service.CaesarChiperService;
+import com.company.service.InputService;
+
+import java.io.StringReader;
+
 public class Main {
 
-    private String text = "Еъёчхф Вхзёюлх, адздёиу ф ждэщхб, црбх еёдюэчъщъгюъв южаижжзчх, ждчъёнъгжзчдв." +
-            " Ъы зёюивй жёхчгюв бюнс ж ъы вдгивъгзхбсгрв аёхкдв. Зъеъёс вгъ дмъчющгд, мзд гъюэцъьгджзс тздшд" +
-            " аёхкх фчбфъзжф жбъщжзчюъв гъждчъёнъгжзчх мъбдчъмъжадшд югщючющиивх. Ф юэимюб чхни южздёюу ю" +
-            " чгыж юэвъгъгюф, здмгъъ дзёхэюч еджздфггиу юэвъгмючджзс мъбдчъмъжаюк едёдадч. Ю зъв гъ въгъъ," +
-            " еджбъщдчхбх гъищхмх. Ф еёюнъб а чрчдщи, мзд чюгдя чжъви вдя югзъббъаз, х чдэвдьгд, вды мёъэвъёгдъ" +
-            " жзёъвбъгюъ ад чжъви шхёвдгюмгдви. Гхязю ёънъгюъ вгъ едвдшбх еёдшёхввх югзиюзючгдшд зюех, жеълюхбсгд" +
-            " ждэщхггхф щбф юэимъгюф деёъщъбъггрк жздёдг мъбдчъмъжадя щиню. Въгф вдьгд гхэчхзс дзлдв Вхзёюлр," +
-            " х ъы, цъэ еёъичъбюмъгюф, вхзъёсу.";
-
-
     public static void main(String[] args) {
+        String stringReader = InputService.readTextFromFile("D:\\epam\\caesarChiper\\src\\com\\company\\Новый текстовый документ (2).txt");
+        System.out.println(stringReader);
 
+        System.out.println(CaesarChiperService.decode("Мама мыла раму", 3));
     }
 }

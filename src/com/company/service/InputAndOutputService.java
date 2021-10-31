@@ -12,8 +12,12 @@ import java.util.List;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 
-public class InputService {
+public class InputAndOutputService {
     private static BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
+
+    public static void writeMessage(String message) {
+        System.out.println(message);
+    }
 
     public static String readTextFromFile(String path) {
         Path absolutePath = Paths.get(path).toAbsolutePath();
@@ -38,6 +42,16 @@ public class InputService {
                     return buf;
             } catch (IOException e) {
                 System.out.println("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
+            }
+        }
+    }
+
+    public static int readInt() {
+        while (true) {
+            try {
+                return Integer.parseInt(readString().trim());
+            } catch (NumberFormatException e) {
+                writeMessage("Произошла ошибка при попытке ввода числа. Попробуйте еще раз.");
             }
         }
     }
